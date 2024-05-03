@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;1,500&display=swap');
+
+body {
+  display: grid;
+  place-content: center;
+  height: 95vh;
+  font-family: "Plus Jakarta Sans", sans-serif; 
+  background-color: hsl(210, 60%, 98%);
+}
+
+:root {
+  --background: hsl(210, 60%, 98%);
+  --color-fondo: hsl(0, 0%, 100%);
+  --color-number: hsl(219, 85%, 26%);
+  --color-dot: hsl(1, 90%, 64%);
+  --color-action: hsl(219, 14%, 63%);
+  --color-hover: hsl(211, 68%, 94%);
+  --color-date: hsl(205, 33%, 90%);
+  --color-sms: hsl(219, 12%, 42%);
+  --color-name: hsl(224, 21%, 14%);
+}
+
+.container {
+  background-color: var(--color-fondo);
+  box-shadow: 2px 1px 15px 5px #eee;
+  border-radius: 15px;
+  height: 100%;
+  width: 35rem;
+  padding: 8px 25px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  display: flex;
+  align-items: center;
+}
+.notif {
+  font-weight: 800;
+}
+.notif-icon {
+  margin: 0 10px;
+  background-color: var(--color-number);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.button {
+  text-decoration: none;
+  color: var(--color-action);
+}
+
+.sms {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 6px 0;
+}
+.notificationHover {
+  background-color: var(--background);
+}
+img {
+  width: 50px;
+  height: 50px;
+}
+.info {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.p {
+  color: var(--color-action);
+  margin: 0 3px;
+}
+span {
+  color: var(--color-sms);
+  font-weight: 800;
+}
+small {
+  color: var(--color-action);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-dot);
+  margin: 0 5px;
+}
+
+.coment {
+  width: 30rem;
+  font-size: 14px;
+  margin-left: 5rem;
+  padding: 10px;
+  border: 1px solid var(--color-date);
+  border-radius: 8px;
+  margin-top: -10px;
+}
