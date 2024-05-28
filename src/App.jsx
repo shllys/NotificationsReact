@@ -1,6 +1,5 @@
 import './App.css'
 import Notif from './components/Notif'
-// import Mensaje from "./components/Mensaje"
 
 
 function App() {
@@ -11,9 +10,20 @@ function App() {
   const notHoverClass = notVisto ? 'sms notificationHover' : 'sms'
   const dot = visto ? 'dot' : ''
 
+  const sms = visto ? 'coment' : 'notComent'
+  const notSms = notVisto ? 'coment' : 'notComent'
+  const img = visto ? 'image' : 'notImage'
+  const notImg = notVisto ? 'image' : 'notImage'
+
+  const chess = visto ? 'hover' : 'notHover'
+  const notChess = notVisto ? 'hover' : 'notHover'
+
   const notifs = [
     {
+      sms: notSms,
+      image: notImg,
       hoverClass,
+      stress: notChess,
       dot,
       userName: 'Mark Webber',
       user: 'mark-webber',
@@ -22,16 +32,22 @@ function App() {
       date: '1m ago'
     },
     {
+      sms: notSms,
+      image: notImg,
       hoverClass,
       dot,
+      stress: notChess,
       userName: 'Angela Gray',
       user: 'angela-gray',
       action: 'followed you',
       date: '5m ago'
     },
     {
+      sms: notSms,
+      image: notImg,
       hoverClass,
       dot,
+      stress: chess,
       userName: 'Jacob Thompson',
       user: 'jacob-thompson',
       action: 'has joined your group',
@@ -39,22 +55,29 @@ function App() {
       date: '1 day ago'
     },
     {
+      sms,
+      stress: notChess,
+      image: notImg,
       hoverClass: notHoverClass,
       userName: 'Rizky Hasanuddin',
       user: 'rizky-hasanuddin',
       action: 'sent you a private message',
       date: '5 days ago',
-      // mensaje: sms
     },
     {
+      image: img,
+      stress: notChess,
+      sms: notSms,
       hoverClass: notHoverClass,
       userName: 'Kimberly Smith',
       user: 'kimberly-smith',
       action: 'commented on your picture',
       date: '1 week ago',
-      // image: './src/img/image-chess.webp'
     },
     {
+      sms: notSms,
+      stress: notChess,
+      image: notImg,
       hoverClass: notHoverClass,
       userName: 'Nathan Peterson',
       user: 'nathan-peterson',
@@ -63,6 +86,9 @@ function App() {
       date: '2 weeks ago'
     },
     {
+      sms: notSms,
+      stress: chess,
+      image: notImg,
       hoverClass: notHoverClass,
       userName: 'Anna Kim',
       user: 'anna-kim',
@@ -87,7 +113,7 @@ function App() {
         </div>
 
         {
-          notifs.map(({ notHoverClass, hoverClass, userName, user, action, dot, coment, date, image }) => (
+          notifs.map(({ image, sms, notHoverClass, hoverClass, userName, user, action, dot, coment, date, stress }) => (
             <Notif
               notHoverClass={notHoverClass}
               hoverClass={hoverClass}
@@ -95,15 +121,16 @@ function App() {
               userName={userName}
               user={user}
               action={action}
-              coment={coment}
               date={date}
+              coment={coment}
+              sms={sms}
               image={image}
+              stress={stress}
             />
           ))
         }
 
 
-        {/* <Mensaje /> */}
 
 
       </div>

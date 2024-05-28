@@ -1,8 +1,7 @@
-# React + Vite
+# Page Notifications / Practice React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Practica de CSS y Componentes.
 
-Currently, two official plugins are available:
+"Dificultades: Displey: Block;, para poner en linea varias etiquetas, el uso de height y width con vh y vw, también el agregar  'Mensaje', poniéndolo como una etiqueta igual a los demás "habilitando" solo para mostrarlo en un componente...
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Opiniones: Creo que podría haber una manera de no usar tanto la expresión ternaria y ademas de agregar un componente en otro"
